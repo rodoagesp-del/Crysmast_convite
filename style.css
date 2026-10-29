@@ -1,0 +1,171 @@
+/* Variables de color temáticas (Navidad) */
+:root {
+    --bg-color: #fcfbf8; /* Crema muy suave */
+    --text-main: #333333;
+    --red-xmas: #8b0000; /* Rojo oscuro elegante */
+    --gold-xmas: #b8860b; /* Dorado */
+    --green-xmas: #2f4f4f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+/* Tipografía */
+.title, .cursive-text {
+    font-family: 'Great Vibes', cursive;
+    color: var(--red-xmas);
+}
+
+.title {
+    font-size: 4rem;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--green-xmas);
+}
+
+/* Reproductor de música */
+.music-player {
+    background-color: rgba(184, 134, 11, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.music-btn {
+    background-color: var(--red-xmas);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Cuenta regresiva */
+.date-box {
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--red-xmas);
+}
+
+.date-box .day {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.time-box small {
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Botones generales */
+.btn {
+    display: inline-block;
+    background-color: var(--gold-xmas);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* Línea de tiempo (Itinerario) */
+.timeline {
+    position: relative;
+    max-width: 400px;
+    margin: 40px auto 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--gold-xmas);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--red-xmas);
+    border-radius: 50%;
+    top: 15px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px;
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px 0;
+    color: var(--red-xmas);
+    font-family: 'Playfair Display', serif;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.9rem;
+}

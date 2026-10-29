@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Navidad Familiar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes elegantes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado / Portada -->
+    <header class="section header-section">
+        <div class="floral-decor top-decor">
+            <!-- Aquí irá una imagen de decoración navideña (ej. hojas de pino, esferas) -->
+            <img src="assets/decoracion-arriba.png" alt="" placeholder="Decoración">
+        </div>
+        
+        <p class="subtitle">La magia de la Navidad es estar juntos...</p>
+        <h1 class="title">Familia<br>Donayre Cabrera</h1>
+        <p class="subtitle">¡Celebremos juntos esta Nochebuena!</p>
+        
+        <!-- Reproductor de Música -->
+        <div class="music-player">
+            <p>Presiona el 🎄 para escuchar nuestra canción</p>
+            <audio id="bgMusic" loop>
+                <!-- Reemplazar con la ruta de tu canción en github -->
+                <source src="assets/musica-navidad.mp3" type="audio/mpeg">
+            </audio>
+            <div class="controls">
+                <button id="playBtn" class="music-btn">🎵 Reproducir</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Fecha y Cuenta Regresiva -->
+    <section class="section countdown-section">
+        <h2>Tenemos el agrado de invitarlos</h2>
+        <div class="date-box">
+            <span class="month">Diciembre</span>
+            <div class="day-year">
+                <span class="day">24</span>
+                <span class="year">2026</span>
+            </div>
+        </div>
+        
+        <div class="countdown-container">
+            <h3 class="cursive-text">Faltan...</h3>
+            <div id="countdown">
+                <div class="time-box"><span id="days">00</span><small>DÍAS</small></div>
+                <div class="time-box"><span id="hours">00</span><small>HORAS</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>MINUTOS</small></div>
+                <div class="time-box"><span id="seconds">00</span><small>SEGUNDOS</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section class="section location-section">
+        <h2 class="cursive-text">La Recepción</h2>
+        <p class="time-text">Hora: 8:00 p.m.</p>
+        <p class="address">Casa de la Familia Donayre<br>Lima, Perú</p>
+        <!-- Reemplaza el # con el enlace de Google Maps -->
+        <a href="#" target="_blank" class="btn">📍 Ver mapa</a>
+    </section>
+
+    <!-- Sección de Itinerario (Línea de tiempo) -->
+    <section class="section timeline-section">
+        <h2 class="cursive-text">Itinerario de actividades</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <h4>8:00 p.m.</h4>
+                    <p>Llegada y Bienvenida</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <h4>9:00 p.m.</h4>
+                    <p>Intercambio de Regalos</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <h4>10:30 p.m.</h4>
+                    <p>Cena Navideña</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <h4>12:00 a.m.</h4>
+                    <p>Brindis y Feliz Navidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
