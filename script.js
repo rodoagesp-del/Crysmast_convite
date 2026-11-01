@@ -1,6 +1,6 @@
 // --- 1. LÓGICA DE LA CUENTA REGRESIVA ---
-// Configura aquí la fecha de la reunión (Año, Mes (0-11, donde 11 es Diciembre), Día, Hora, Minuto)
-const targetDate = new Date(2026, 11, 24, 20, 0, 0).getTime();
+// Actualizado para las 7:00 PM (19:00 horas) del 24 de Diciembre de 2026
+const targetDate = new Date(2026, 11, 24, 19, 0, 0).getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();

@@ -6,26 +6,24 @@
     <title>Invitación de Navidad Familiar</title>
     <link rel="stylesheet" href="style.css">
     <!-- Fuentes elegantes de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Encabezado / Portada -->
     <header class="section header-section">
         <div class="floral-decor top-decor">
-            <!-- Aquí irá una imagen de decoración navideña (ej. hojas de pino, esferas) -->
-            <img src="assets/decoracion-arriba.png" alt="" placeholder="Decoración">
+            <img src="assets/decoracion-arriba.png" alt="" class="placeholder-decor">
         </div>
         
         <p class="subtitle">La magia de la Navidad es estar juntos...</p>
-        <h1 class="title">Familia<br>Donayre Cabrera</h1>
-        <p class="subtitle">¡Celebremos juntos esta Nochebuena!</p>
+        <h1 class="title">Feliz<br>Navidad</h1>
+        <p class="subtitle">¡Celebremos Juntos!</p>
         
         <!-- Reproductor de Música -->
         <div class="music-player">
             <p>Presiona el 🎄 para escuchar nuestra canción</p>
             <audio id="bgMusic" loop>
-                <!-- Reemplazar con la ruta de tu canción en github -->
                 <source src="assets/musica-navidad.mp3" type="audio/mpeg">
             </audio>
             <div class="controls">
@@ -34,15 +32,34 @@
         </div>
     </header>
 
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
+
+    <!-- Sección de Mensaje de Bienvenida -->
+    <section class="section welcome-section">
+        <div class="welcome-box">
+            <p>Únete a nuestra celebración y disfruta de una velada llena de diversión, música, juegos emocionantes, muchos regalos y lo mejor de todo en Unión, amor y paz.</p>
+        </div>
+    </section>
+
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
+
     <!-- Sección de Fecha y Cuenta Regresiva -->
     <section class="section countdown-section">
-        <h2>Tenemos el agrado de invitarlos</h2>
-        <div class="date-box">
-            <span class="month">Diciembre</span>
-            <div class="day-year">
-                <span class="day">24</span>
-                <span class="year">2026</span>
+        <h2 class="cursive-text">Tenemos el agrado de invitarlos a la Velada Navideña</h2>
+        
+        <div class="date-box-new">
+            <div class="month-top">Diciembre</div>
+            <div class="date-row">
+                <div class="day-word"><span>Jueves</span></div>
+                <div class="day-number">24</div>
+                <div class="year-word"><span>2026</span></div>
             </div>
+        </div>
+        
+        <div class="location-info">
+            <p class="address">Dirección de la Recepción<br>Mz.M Lt.30B Urb.SantaElisa,3ra Etapa, Calle 2, Los Olivos, 4to Piso, Lima, Perú</p>
+            <a href="URL_DEL_MAPA_AQUI" target="_blank" class="btn">📍 Ver mapa</a>
+            <p class="time-text">Hora: 7:00 p.m.</p>
         </div>
         
         <div class="countdown-container">
@@ -56,48 +73,69 @@
         </div>
     </section>
 
-    <!-- Sección de Ubicación -->
-    <section class="section location-section">
-        <h2 class="cursive-text">La Recepción</h2>
-        <p class="time-text">Hora: 8:00 p.m.</p>
-        <p class="address">Casa de la Familia Donayre<br>Lima, Perú</p>
-        <!-- Reemplaza el # con el enlace de Google Maps -->
-        <a href="#" target="_blank" class="btn">📍 Ver mapa</a>
-    </section>
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
 
-    <!-- Sección de Itinerario (Línea de tiempo) -->
-    <section class="section timeline-section">
-        <h2 class="cursive-text">Itinerario de actividades</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content left">
-                    <h4>8:00 p.m.</h4>
-                    <p>Llegada y Bienvenida</p>
-                </div>
+    <!-- Sección Villancicos -->
+    <section class="section carols-section">
+        <div class="carols-container">
+            <div class="bells-cacophony">
+                <span class="bell-1">¡Din,</span>
+                <span class="bell-2">Don,</span>
+                <span class="bell-3">Dan!</span>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content right">
-                    <h4>9:00 p.m.</h4>
-                    <p>Intercambio de Regalos</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content left">
-                    <h4>10:30 p.m.</h4>
-                    <p>Cena Navideña</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content right">
-                    <h4>12:00 a.m.</h4>
-                    <p>Brindis y Feliz Navidad</p>
-                </div>
+            <div class="carols-image-wrapper">
+                <!-- Espacio para imagen de personitas -->
+                <img src="assets/personitas.png" alt="Personitas cantando" class="placeholder-img">
+                <p class="carols-text">¡Ven a cantar villancicos y más!</p>
             </div>
         </div>
+    </section>
+
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
+
+    <!-- Sección Zona de Juegos -->
+    <section class="section games-section">
+        <div class="games-container">
+            <div class="games-left">
+                <!-- Espacio para imagen de los juegos -->
+                <img src="assets/juegos.png" alt="Juegos de mesa" class="placeholder-img small">
+                <p class="caos-text">¡Que empiece el Caos!</p>
+            </div>
+            <div class="games-right">
+                <h2 class="cursive-text">Zona de Juegos</h2>
+                <!-- Espacio para imagen del Grinch -->
+                <img src="assets/grinch.gif" alt="Grinch Animado" class="placeholder-img">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
+
+    <!-- Sección Rey Mago y Regalo -->
+    <section class="section gifts-section">
+        <h2 class="cursive-text center-title">Conviértete en un Rey Mago</h2>
+        <div class="gifts-container">
+            <div class="gifts-left">
+                <!-- Espacio para imagen de reyes magos -->
+                <img src="assets/reyes-magos.png" alt="Reyes Magos" class="placeholder-img">
+            </div>
+            <div class="gifts-right">
+                <h3 class="stolen-gift-title">¡Regalo Robado!</h3>
+                <p class="gift-desc">Ven con un regalo valorado en 5 soles</p>
+                <p class="gift-desc highlight">¡Lo que se te ocurra, no hay regalo malo, pero sé creativo!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider">✧ 🎄 ✧ 🎄 ✧</div>
+
+    <!-- Sección Niño Jesús -->
+    <section class="section jesus-section">
+        <h2 class="important-title">Y lo más importante :</h2>
+        <!-- Espacio para imagen bella del niño jesús en pesebre -->
+        <img src="assets/nino-jesus.png" alt="Niño Jesús" class="placeholder-img large">
+        <h3 class="jesus-subtitle">La llegada del Niño Jesús</h3>
+        <p class="enjoy-text">Y a seguir Disfrutando.</p>
     </section>
 
     <script src="script.js"></script>

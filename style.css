@@ -1,9 +1,9 @@
 /* Variables de color temáticas (Navidad) */
 :root {
-    --bg-color: #fcfbf8; /* Crema muy suave */
+    --bg-color: #fcfbf8; 
     --text-main: #333333;
-    --red-xmas: #8b0000; /* Rojo oscuro elegante */
-    --gold-xmas: #b8860b; /* Dorado */
+    --red-xmas: #8b0000; 
+    --gold-xmas: #b8860b; 
     --green-xmas: #2f4f4f;
 }
 
@@ -14,25 +14,34 @@ body {
     color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .section {
-    padding: 60px 20px;
+    padding: 30px 20px;
     max-width: 600px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(184, 134, 11, 0.2);
 }
 
-/* Tipografía */
-.title, .cursive-text {
+/* Divisores hermosos Navideños */
+.divider {
+    font-size: 1.5rem;
+    color: var(--gold-xmas);
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 10px;
+}
+
+/* Tipografía Básica */
+.title, .cursive-text, .important-title, .stolen-gift-title {
     font-family: 'Great Vibes', cursive;
-    color: var(--red-xmas);
 }
 
 .title {
     font-size: 4rem;
     margin: 10px 0;
     line-height: 1.2;
+    color: var(--red-xmas);
 }
 
 .subtitle {
@@ -40,6 +49,12 @@ body {
     font-style: italic;
     font-size: 1.2rem;
     color: var(--green-xmas);
+}
+
+.cursive-text {
+    color: var(--red-xmas);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 /* Reproductor de música */
@@ -61,18 +76,78 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Cuenta regresiva */
-.date-box {
-    margin: 20px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+/* Nueva Sección: Bienvenida encuadrada */
+.welcome-box {
+    border: 2px solid var(--gold-xmas);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(47, 79, 79, 0.05); /* Fondo muy sutil verde */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--green-xmas);
+    font-weight: 500;
+}
+
+/* Diseño de Fecha Tipográfica (Jueves 24 2026) */
+.date-box-new {
+    margin: 30px 0;
     color: var(--red-xmas);
 }
 
-.date-box .day {
-    font-size: 3rem;
+.month-top {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.date-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.day-word span, .year-word span {
+    border-top: 2px solid var(--gold-xmas);
+    border-bottom: 2px solid var(--gold-xmas);
+    padding: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-block;
+    color: var(--green-xmas);
+}
+
+.day-number {
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
-    margin: 0 15px;
+    line-height: 1;
+    color: var(--gold-xmas);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.location-info {
+    margin: 20px 0;
+}
+
+.address {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.time-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--green-xmas);
+    margin-top: 15px;
+}
+
+/* Cuenta regresiva */
+.countdown-container {
+    margin-top: 30px;
 }
 
 #countdown {
@@ -87,15 +162,17 @@ body {
     flex-direction: column;
     font-size: 2rem;
     font-family: 'Playfair Display', serif;
+    color: var(--red-xmas);
 }
 
 .time-box small {
     font-size: 0.7rem;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
+    color: var(--text-main);
 }
 
-/* Botones generales */
+/* Botones */
 .btn {
     display: inline-block;
     background-color: var(--gold-xmas);
@@ -103,69 +180,147 @@ body {
     text-decoration: none;
     padding: 12px 30px;
     border-radius: 25px;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Línea de tiempo (Itinerario) */
-.timeline {
-    position: relative;
-    max-width: 400px;
-    margin: 40px auto 0;
+/* Sección Villancicos (Din Don Dan) */
+.carols-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: var(--gold-xmas);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
+.bells-cacophony {
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: var(--gold-xmas);
+    line-height: 1.1;
 }
 
-.timeline-dot {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: var(--red-xmas);
-    border-radius: 50%;
-    top: 15px;
+.bell-1 { margin-left: 0; }
+.bell-2 { margin-left: 20px; }
+.bell-3 { margin-left: 40px; }
+
+.carols-image-wrapper {
+    text-align: center;
 }
 
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -8px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -8px;
-}
-
-.timeline-content h4 {
-    margin: 0 0 5px 0;
+.carols-text {
+    font-weight: bold;
     color: var(--red-xmas);
-    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-.timeline-content p {
-    margin: 0;
-    font-size: 0.9rem;
+/* Sección Zona de Juegos */
+.games-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.games-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caos-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--red-xmas);
+    transform: rotate(-10deg);
+    margin-top: 10px;
+}
+
+/* Sección Regalo Robado */
+.gifts-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gifts-right {
+    text-align: left;
+    max-width: 250px;
+}
+
+.stolen-gift-title {
+    color: var(--red-xmas);
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+}
+
+.gift-desc {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.gift-desc.highlight {
+    font-weight: 700;
+    color: var(--green-xmas);
+}
+
+/* Sección Niño Jesús */
+.jesus-section {
+    text-align: center;
+}
+
+.important-title {
+    font-size: 3rem;
+    color: var(--gold-xmas);
+    margin-bottom: 20px;
+}
+
+.jesus-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--red-xmas);
+    margin-top: 15px;
+}
+
+.enjoy-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--green-xmas);
+}
+
+/* Placeholders para que sepas dónde insertar tus imágenes */
+.placeholder-decor {
+    width: 100%;
+    height: 80px;
+    background-color: #e5e5e5;
+    object-fit: cover;
+}
+
+.placeholder-img {
+    width: 160px;
+    height: 160px;
+    background-color: #f0eae1;
+    border: 2px dashed var(--gold-xmas);
+    border-radius: 15px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.placeholder-img.small {
+    width: 120px;
+    height: 120px;
+}
+
+.placeholder-img.large {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
 }
