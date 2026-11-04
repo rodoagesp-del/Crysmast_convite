@@ -26,18 +26,37 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // --- 2. LÓGICA DEL REPRODUCTOR DE MÚSICA ---
-const music = document.getElementById("bgMusic");
+const music1 = document.getElementById("bgMusic1");
+const music2 = document.getElementById("bgMusic2");
 const playBtn = document.getElementById("playBtn");
-let isPlaying = false;
+
+// Intentar reproducir la música de fondo al cargar la página
+// (Nota: Las políticas de los navegadores pueden requerir un primer clic del usuario en la pantalla)
+window.addEventListener('click', () => {
+    if (music1.paused && music2.paused) {
+        music1.play().catch(error => console.log("La reproducción automática fue bloqueada por el navegador."));
+    }
+}, { once: true }); // El evento solo se ejecuta en el primer clic/toque de pantalla
 
 playBtn.addEventListener("click", function() {
-    if (isPlaying) {
-        music.pause();
-        playBtn.innerText = "🎵 Reproducir";
-        isPlaying = false;
+    // Si la música 2 está sonando y presionan el botón de nuevo, la detenemos
+    if (!music2.paused) {
+        music2.pause();
+        music2.currentTime = 0; // Reiniciamos la canción 2
+        playBtn.innerText = "🎄 Reproducir Sorpresa";
+        music1.play(); // Volvemos a la música de fondo
     } else {
-        music.play();
-        playBtn.innerText = "⏸️ Pausar";
-        isPlaying = true;
+        // Pausamos la música de fondo (Musica1)
+        music1.pause();
+        
+        // Reproducimos la música especial (Musica2)
+        music2.play();
+        playBtn.innerText = "⏹️ Detener Sorpresa";
     }
+});
+
+// Cuando la música especial (Musica2) termine, vuelve a empezar la música de fondo (Musica1)
+music2.addEventListener('ended', function() {
+    playBtn.innerText = "🎄 Reproducir Sorpresa";
+    music1.play();
 });

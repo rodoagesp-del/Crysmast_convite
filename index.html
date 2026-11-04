@@ -22,12 +22,20 @@
         
         <!-- Reproductor de Música -->
         <div class="music-player">
-            <p>Presiona el 🎄 para escuchar nuestra canción</p>
-            <audio id="bgMusic" loop>
-                <source src="assets/musica-navidad.mp3" type="audio/mpeg">
+            <p>Presiona el 🎄 para escuchar nuestra canción sorpresa</p>
+            
+            <!-- Música de fondo que se repetirá en bucle -->
+            <audio id="bgMusic1" loop>
+                <source src="assets/Musica1.m4a" type="audio/mp4">
             </audio>
+
+            <!-- Música especial del botón -->
+            <audio id="bgMusic2">
+                <source src="assets/Musica2.m4a" type="audio/mp4">
+            </audio>
+
             <div class="controls">
-                <button id="playBtn" class="music-btn">🎵 Reproducir</button>
+                <button id="playBtn" class="music-btn">🎄 Reproducir Sorpresa</button>
             </div>
         </div>
     </header>
@@ -118,7 +126,7 @@
             <div class="gifts-right">
                 <h3 class="stolen-gift-title">¡Regalo Robado!</h3>
                 <p class="gift-desc">Ven con un regalo valorado en 5 soles</p>
-                <p class="gift-desc highlight">¡Lo que se te ocurra, no hay regalo malo, pero sé creativo!</p>
+                <p class="gift-desc highlight">¡Lo que se te ocurra, vale la imaginación!</p>
             </div>
         </div>
     </section>

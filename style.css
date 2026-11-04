@@ -20,28 +20,31 @@ body {
     overflow-x: hidden;
 }
 
+/* Contenedor fluido para adaptación en móviles y PC */
 .section {
-    padding: 30px 20px;
-    max-width: 600px;
+    padding: 30px 15px; /* Ligeramente menor en móviles */
+    max-width: 800px; /* Ancho mayor para aprovechar pantallas grandes */
+    width: 90%;
     margin: 0 auto;
 }
 
 /* Divisores hermosos Navideños */
 .divider {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     color: var(--gold-xmas);
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0;
     letter-spacing: 10px;
 }
 
-/* Tipografía Básica */
+/* Tipografía Básica (Alineada al Centro) */
 .title, .cursive-text, .important-title, .stolen-gift-title {
     font-family: 'Great Vibes', cursive;
+    text-align: center;
 }
 
 .title {
-    font-size: 4rem;
+    font-size: clamp(3rem, 10vw, 5rem);
     margin: 10px 0;
     line-height: 1.2;
     color: var(--red-xmas);
@@ -50,14 +53,16 @@ body {
 .subtitle {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.3rem);
     color: var(--green-xmas);
+    text-align: center;
 }
 
 .cursive-text {
     color: var(--red-xmas);
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 /* Reproductor de música */
@@ -65,7 +70,8 @@ body {
     background-color: rgba(184, 134, 11, 0.1);
     padding: 20px;
     border-radius: 15px;
-    margin-top: 30px;
+    margin: 30px auto 0; /* Centrado */
+    max-width: 400px;
 }
 
 .music-btn {
@@ -85,21 +91,23 @@ body {
     padding: 20px;
     border-radius: 15px;
     background-color: rgba(47, 79, 79, 0.05); /* Fondo muy sutil verde */
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     line-height: 1.6;
     color: var(--green-xmas);
     font-weight: 500;
+    text-align: center;
 }
 
 /* Diseño de Fecha Tipográfica (Jueves 24 2026) */
 .date-box-new {
     margin: 30px 0;
     color: var(--red-xmas);
+    text-align: center;
 }
 
 .month-top {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -109,6 +117,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .day-word span, .year-word span {
@@ -118,13 +127,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     display: inline-block;
     color: var(--green-xmas);
 }
 
 .day-number {
-    font-size: 5rem;
+    font-size: clamp(4rem, 12vw, 6rem);
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     line-height: 1;
@@ -134,10 +143,11 @@ body {
 
 .location-info {
     margin: 20px 0;
+    text-align: center;
 }
 
 .address {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     font-weight: 500;
 }
 
@@ -158,12 +168,13 @@ body {
     justify-content: center;
     gap: 15px;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .time-box {
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     font-family: 'Playfair Display', serif;
     color: var(--red-xmas);
 }
@@ -188,28 +199,36 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Sección Villancicos (Din Don Dan) */
-.carols-container {
+/* Contenedores flexibles: En móviles se apilan (column), en PC se ponen de lado (row) */
+.carols-container, .games-container, .gifts-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column; /* Apilamiento en móviles */
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
+@media (min-width: 768px) {
+    .carols-container, .games-container, .gifts-container {
+        flex-direction: row; /* Uno al lado del otro en PC */
+        flex-wrap: wrap;
+    }
+}
+
+/* Textos Centralizados para Villancicos */
 .bells-cacophony {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center; /* Modificado de left a center */
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     color: var(--gold-xmas);
     line-height: 1.1;
 }
 
 .bell-1 { margin-left: 0; }
-.bell-2 { margin-left: 20px; }
-.bell-3 { margin-left: 40px; }
+.bell-2 { margin-left: 0; } /* Reseteado para centrado total */
+.bell-3 { margin-left: 0; } /* Reseteado para centrado total */
 
 .carols-image-wrapper {
     text-align: center;
@@ -220,54 +239,49 @@ body {
     color: var(--red-xmas);
     font-size: 1.1rem;
     margin-top: 10px;
+    text-align: center;
 }
 
-/* Sección Zona de Juegos */
-.games-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
+/* Textos Centralizados para Juegos */
 .games-left {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .caos-text {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: var(--red-xmas);
     transform: rotate(-10deg);
-    margin-top: 10px;
+    margin-top: 15px;
+    text-align: center;
 }
 
-/* Sección Regalo Robado */
-.gifts-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.games-right {
+    text-align: center;
+}
+
+/* Textos Centralizados para Regalo */
+.gifts-left {
+    text-align: center;
 }
 
 .gifts-right {
-    text-align: left;
-    max-width: 250px;
+    text-align: center; /* Modificado de left a center */
+    max-width: 300px;
 }
 
 .stolen-gift-title {
     color: var(--red-xmas);
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
     margin: 0 0 10px 0;
 }
 
 .gift-desc {
-    margin: 5px 0;
-    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
 .gift-desc.highlight {
@@ -281,14 +295,14 @@ body {
 }
 
 .important-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     color: var(--gold-xmas);
     margin-bottom: 20px;
 }
 
 .jesus-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
     color: var(--red-xmas);
     margin-top: 15px;
 }
@@ -299,31 +313,28 @@ body {
     color: var(--green-xmas);
 }
 
-/* Placeholders para que sepas dónde insertar tus imágenes */
+/* Mantenimiento de las imágenes grandes originales con adaptabilidad */
 .placeholder-decor {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Evita que la imagen se haga gigante */
-    object-fit: contain;
-    background-color: transparent; /* Quitamos el cuadro gris */
-    margin-bottom: -20px; /* Acerca el texto a la guirnalda */
+    background-color: transparent;
+    object-fit: cover;
 }
 
 .placeholder-img {
+    width: 160px; /* Tamaño original mantenido */
+    height: auto;
     border-radius: 15px;
     display: inline-block;
     object-fit: cover;
-    max-width: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra elegante para resaltar */
+    max-width: 100%; /* Evita desborde en pantallas diminutas */
 }
 
 .placeholder-img.small {
-    width: 120px;
-    height: 120px;
+    width: 120px; /* Tamaño original mantenido */
 }
 
 .placeholder-img.large {
-    width: 220px;
-    height: 220px;
+    width: 220px; /* Tamaño original mantenido */
     border-radius: 20px;
 }
