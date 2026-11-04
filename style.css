@@ -22,8 +22,8 @@ body {
 
 /* Contenedor fluido para adaptación en móviles y PC */
 .section {
-    padding: 30px 15px; /* Ligeramente menor en móviles */
-    max-width: 800px; /* Ancho mayor para aprovechar pantallas grandes */
+    padding: 30px 15px;
+    max-width: 800px;
     width: 90%;
     margin: 0 auto;
 }
@@ -70,7 +70,7 @@ body {
     background-color: rgba(184, 134, 11, 0.1);
     padding: 20px;
     border-radius: 15px;
-    margin: 30px auto 0; /* Centrado */
+    margin: 30px auto 0;
     max-width: 400px;
 }
 
@@ -90,7 +90,7 @@ body {
     border: 2px solid var(--gold-xmas);
     padding: 20px;
     border-radius: 15px;
-    background-color: rgba(47, 79, 79, 0.05); /* Fondo muy sutil verde */
+    background-color: rgba(47, 79, 79, 0.05);
     font-size: clamp(1rem, 3vw, 1.2rem);
     line-height: 1.6;
     color: var(--green-xmas);
@@ -202,7 +202,7 @@ body {
 /* Contenedores flexibles: En móviles se apilan (column), en PC se ponen de lado (row) */
 .carols-container, .games-container, .gifts-container {
     display: flex;
-    flex-direction: column; /* Apilamiento en móviles */
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
@@ -210,7 +210,7 @@ body {
 
 @media (min-width: 768px) {
     .carols-container, .games-container, .gifts-container {
-        flex-direction: row; /* Uno al lado del otro en PC */
+        flex-direction: row;
         flex-wrap: wrap;
     }
 }
@@ -219,16 +219,16 @@ body {
 .bells-cacophony {
     display: flex;
     flex-direction: column;
-    text-align: center; /* Modificado de left a center */
+    text-align: center;
     font-family: 'Great Vibes', cursive;
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     color: var(--gold-xmas);
     line-height: 1.1;
 }
 
-.bell-1 { margin-left: 0; }
-.bell-2 { margin-left: 0; } /* Reseteado para centrado total */
-.bell-3 { margin-left: 0; } /* Reseteado para centrado total */
+.bell-1, .bell-2, .bell-3 { 
+    margin-left: 0; 
+} 
 
 .carols-image-wrapper {
     text-align: center;
@@ -269,7 +269,7 @@ body {
 }
 
 .gifts-right {
-    text-align: center; /* Modificado de left a center */
+    text-align: center;
     max-width: 300px;
 }
 
@@ -289,28 +289,38 @@ body {
     color: var(--green-xmas);
 }
 
-/* Sección Niño Jesús */
+/* Sección Niño Jesús - Mejorada */
 .jesus-section {
     text-align: center;
-}
-
-.important-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--gold-xmas);
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .jesus-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
-    color: var(--red-xmas);
-    margin-top: 15px;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--gold-xmas); /* Tono dorado para resaltar sobre el fondo */
+    margin: 10px 0 0 0;
 }
 
 .enjoy-text {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     font-style: italic;
-    color: var(--green-xmas);
+    color: var(--green-xmas); /* Tono verde oscuro legible */
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500; /* Ligeramente más grueso para legibilidad sobre imágenes de fondo */
+}
+
+.highlight-invite {
+    color: var(--red-xmas);
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 15px;
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
 }
 
 /* Mantenimiento de las imágenes grandes originales con adaptabilidad */
@@ -322,19 +332,19 @@ body {
 }
 
 .placeholder-img {
-    width: 160px; /* Tamaño original mantenido */
+    width: 160px;
     height: auto;
     border-radius: 15px;
     display: inline-block;
     object-fit: cover;
-    max-width: 100%; /* Evita desborde en pantallas diminutas */
+    max-width: 100%;
 }
 
 .placeholder-img.small {
-    width: 120px; /* Tamaño original mantenido */
+    width: 120px;
 }
 
 .placeholder-img.large {
-    width: 220px; /* Tamaño original mantenido */
+    width: 220px;
     border-radius: 20px;
 }

@@ -30,13 +30,25 @@ const music1 = document.getElementById("bgMusic1");
 const music2 = document.getElementById("bgMusic2");
 const playBtn = document.getElementById("playBtn");
 
-// Intentar reproducir la música de fondo al cargar la página
-// (Nota: Las políticas de los navegadores pueden requerir un primer clic del usuario en la pantalla)
-window.addEventListener('click', () => {
+// --- INTENTO DE REPRODUCCIÓN AUTOMÁTICA MEJORADA ---
+// Función para iniciar la música con cualquier interacción
+const iniciarMusica = () => {
     if (music1.paused && music2.paused) {
-        music1.play().catch(error => console.log("La reproducción automática fue bloqueada por el navegador."));
+        music1.play().then(() => {
+            // Si la reproducción tiene éxito, eliminamos los listeners para que no se repita la orden
+            ['click', 'touchstart', 'scroll', 'mousemove', 'keydown'].forEach(evento => {
+                window.removeEventListener(evento, iniciarMusica);
+            });
+        }).catch(error => {
+            console.log("La reproducción automática requiere más interacción del navegador.");
+        });
     }
-}, { once: true }); // El evento solo se ejecuta en el primer clic/toque de pantalla
+};
+
+// Asignamos la función a múltiples eventos de usuario (toque, scroll, movimiento, clic, teclado)
+['click', 'touchstart', 'scroll', 'mousemove', 'keydown'].forEach(evento => {
+    window.addEventListener(evento, iniciarMusica, { passive: true });
+});
 
 playBtn.addEventListener("click", function() {
     // Si la música 2 está sonando y presionan el botón de nuevo, la detenemos
