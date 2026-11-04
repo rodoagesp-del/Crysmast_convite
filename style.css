@@ -10,7 +10,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
+    background-image: url('assets/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -299,19 +302,19 @@ body {
 /* Placeholders para que sepas dónde insertar tus imágenes */
 .placeholder-decor {
     width: 100%;
-    height: 80px;
-    background-color: #e5e5e5;
-    object-fit: cover;
+    height: auto;
+    max-height: 150px; /* Evita que la imagen se haga gigante */
+    object-fit: contain;
+    background-color: transparent; /* Quitamos el cuadro gris */
+    margin-bottom: -20px; /* Acerca el texto a la guirnalda */
 }
 
 .placeholder-img {
-    width: 160px;
-    height: 160px;
-    background-color: #f0eae1;
-    border: 2px dashed var(--gold-xmas);
     border-radius: 15px;
     display: inline-block;
     object-fit: cover;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra elegante para resaltar */
 }
 
 .placeholder-img.small {
