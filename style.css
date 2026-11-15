@@ -242,25 +242,55 @@ body {
     text-align: center;
 }
 
-/* Textos Centralizados para Juegos */
-.games-left {
+/* Textos Centralizados para Juegos (Actualizado) */
+.games-layout-new {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+/* En PC, forzamos que los tres elementos estén en una sola fila */
+@media (min-width: 768px) {
+    .games-layout-new {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+.game-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Distribuye el espacio equitativamente en horizontal (PC) */
 }
 
 .caos-text {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(2.2rem, 6vw, 3rem); /* Texto ligeramente más grande y adaptable */
     color: var(--red-xmas);
     transform: rotate(-10deg);
-    margin-top: 15px;
+    margin: 15px 10px;
     text-align: center;
 }
 
-.games-right {
-    text-align: center;
+.grinch-img {
+    width: clamp(130px, 20vw, 180px); /* Tamaño dinámico entre celular y PC */
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.bingo-img {
+    width: clamp(120px, 18vw, 160px); /* Ligeramente más pequeño que el grinch para equilibrar visualmente */
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Textos Centralizados para Regalo */
