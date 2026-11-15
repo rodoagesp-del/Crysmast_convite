@@ -378,3 +378,23 @@ body {
     width: 220px;
     border-radius: 20px;
 }
+
+/* Nuevos estilos para Sección Niño Jesús */
+.sublime-text {
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    font-style: italic;
+    color: var(--green-xmas);
+    line-height: 1.5;
+    max-width: 650px;
+    margin: 5px auto 15px auto;
+    font-weight: 600;
+}
+
+.big-dont-miss {
+    display: block;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-family: 'Great Vibes', cursive;
+    color: var(--red-xmas);
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
