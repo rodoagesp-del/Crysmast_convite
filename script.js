@@ -71,7 +71,7 @@ function enviarRespuesta(estado, boton) {
     const guestId = urlParams.get('guest');
     
     // Enlace real de tu plataforma de Google Apps Script
-    let rsvpUrl = "https://script.google.com/macros/s/AKfycbwv1oZT__4yTpZIQM2fr7oNbK20LMYZf2uin9eKk5Lv-LVLtSMShIwOXt5ZMBeZcjfp/exec";
+    let rsvpUrl = "https://script.google.com/macros/s/AKfycbwDUQHqQozCrRE8y7biNj06Z30brk3k_c8refn1XG0M-JHNVtqUaoQ2FRSjM8htFLRaZA/exec";
     
     if (guestId) {
         // Añadimos el guest y el estado (yes o no) a la URL
