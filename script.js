@@ -72,3 +72,29 @@ music2.addEventListener('ended', function() {
     playBtn.innerText = "🎄 Reproducir Sorpresa";
     music1.play();
 });
+
+// --- 3. LÓGICA DE CONFIRMACIÓN DE ASISTENCIA ---
+const btnConfirmar = document.getElementById("btnConfirmar");
+
+if (btnConfirmar) {
+    btnConfirmar.addEventListener("click", function() {
+        // Obtenemos el identificador del invitado desde la URL actual de la tarjeta (si existe)
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestId = urlParams.get('guest');
+        
+        // Enlace real de tu plataforma de Google Apps Script
+        let rsvpUrl = "https://script.google.com/macros/s/AKfycbxuSZ4cdlzi6Daic2hsc3Wz-XIlyCuYnB--Vb5KpMJMa6PUS22EUz-Ymu34kjKoakJt/exec";
+        
+        // Si hay un ID de invitado, se lo pasamos a la plataforma de confirmación
+        if (guestId) {
+            rsvpUrl += "?guest=" + guestId;
+        }
+        
+        // Efecto visual antes de redirigir
+        btnConfirmar.innerText = "Redirigiendo...";
+        btnConfirmar.style.backgroundColor = "var(--green-xmas)";
+        
+        // Redirige directamente al backend de Google Apps Script
+        window.location.href = rsvpUrl;
+    });
+}
