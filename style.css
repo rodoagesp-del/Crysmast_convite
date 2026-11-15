@@ -66,7 +66,7 @@ body {
 /* 3. Fuente cursiva caligráfica para los subtítulos */
 .cursive-text, .jesus-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem; /* Las letras cursivas suelen verse pequeñas, esto ayuda a que resalten */
+    font-size: 2.5rem;
     font-weight: normal;
 }
 
@@ -251,7 +251,7 @@ body {
     text-align: center;
 }
 
-/* Textos Centralizados para Juegos (Actualizado) */
+/* Textos Centralizados para Juegos */
 .games-layout-new {
     display: flex;
     flex-direction: column;
@@ -261,7 +261,6 @@ body {
     gap: 20px;
 }
 
-/* En PC, forzamos que los tres elementos estén en una sola fila */
 @media (min-width: 768px) {
     .games-layout-new {
         flex-direction: row;
@@ -274,7 +273,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Distribuye el espacio equitativamente en horizontal (PC) */
+    flex: 1;
 }
 
 /* 4. Un toque llamativo para la sección de juegos */
@@ -284,7 +283,7 @@ body {
 }
 
 .caos-text {
-    font-size: clamp(2.2rem, 6vw, 3rem); /* Texto ligeramente más grande y adaptable */
+    font-size: clamp(2.2rem, 6vw, 3rem);
     color: var(--red-xmas);
     transform: rotate(-10deg);
     margin: 15px 10px;
@@ -292,7 +291,7 @@ body {
 }
 
 .grinch-img {
-    width: clamp(130px, 20vw, 180px); /* Tamaño dinámico entre celular y PC */
+    width: clamp(130px, 20vw, 180px);
     height: auto;
     border-radius: 15px;
     object-fit: cover;
@@ -300,7 +299,7 @@ body {
 }
 
 .bingo-img {
-    width: clamp(120px, 18vw, 160px); /* Ligeramente más pequeño que el grinch para equilibrar visualmente */
+    width: clamp(120px, 18vw, 160px);
     height: auto;
     border-radius: 15px;
     object-fit: cover;
@@ -344,7 +343,7 @@ body {
 
 .jesus-subtitle {
     font-size: clamp(2.8rem, 8vw, 4.2rem);
-    color: var(--gold-xmas); /* Tono dorado para resaltar sobre el fondo */
+    color: var(--gold-xmas);
     margin: 10px 0 0 0;
     line-height: 1.2;
 }
@@ -352,11 +351,11 @@ body {
 .enjoy-text {
     font-size: clamp(1rem, 3vw, 1.2rem);
     font-style: italic;
-    color: var(--green-xmas); /* Tono verde oscuro legible */
+    color: var(--green-xmas);
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
-    font-weight: 500; /* Ligeramente más grueso para legibilidad sobre imágenes de fondo */
+    font-weight: 500;
 }
 
 .highlight-invite {
@@ -439,4 +438,29 @@ body {
     background-color: var(--gold-xmas);
     border-color: var(--red-xmas);
     transform: scale(1.05);
+}
+
+/* Botones de Confirmación */
+.rsvp-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-yes {
+    background-color: var(--green-xmas);
+    border-color: var(--gold-xmas);
+}
+
+.btn-no {
+    background-color: transparent;
+    color: var(--red-xmas);
+    border: 2px solid var(--red-xmas);
+}
+
+.btn-no:hover {
+    background-color: var(--red-xmas);
+    color: white;
 }
