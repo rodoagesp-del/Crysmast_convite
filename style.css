@@ -343,9 +343,10 @@ body {
 }
 
 .jesus-subtitle {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(2.8rem, 8vw, 4.2rem);
     color: var(--gold-xmas); /* Tono dorado para resaltar sobre el fondo */
     margin: 10px 0 0 0;
+    line-height: 1.2;
 }
 
 .enjoy-text {
