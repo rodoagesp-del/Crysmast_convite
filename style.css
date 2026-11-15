@@ -7,6 +7,7 @@
     --green-xmas: #2f4f4f;
 }
 
+/* 1. Fuente general para lectura clara (dirección, horarios, descripciones) */
 body {
     margin: 0;
     padding: 0;
@@ -39,8 +40,12 @@ body {
 
 /* Tipografía Básica (Alineada al Centro) */
 .title, .cursive-text, .important-title, .stolen-gift-title {
-    font-family: 'Great Vibes', cursive;
     text-align: center;
+}
+
+/* 2. Fuente elegante y festiva para el título principal y fechas */
+.title, .month-top, .day-number {
+    font-family: 'Cinzel Decorative', serif;
 }
 
 .title {
@@ -58,9 +63,15 @@ body {
     text-align: center;
 }
 
+/* 3. Fuente cursiva caligráfica para los subtítulos */
+.cursive-text, .jesus-subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem; /* Las letras cursivas suelen verse pequeñas, esto ayuda a que resalten */
+    font-weight: normal;
+}
+
 .cursive-text {
     color: var(--red-xmas);
-    font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: 10px;
     line-height: 1.2;
 }
@@ -106,7 +117,6 @@ body {
 }
 
 .month-top {
-    font-family: 'Great Vibes', cursive;
     font-size: clamp(2.5rem, 8vw, 4rem);
     line-height: 1;
     margin-bottom: 10px;
@@ -134,7 +144,6 @@ body {
 
 .day-number {
     font-size: clamp(4rem, 12vw, 6rem);
-    font-family: 'Playfair Display', serif;
     font-weight: bold;
     line-height: 1;
     color: var(--gold-xmas);
@@ -268,8 +277,13 @@ body {
     flex: 1; /* Distribuye el espacio equitativamente en horizontal (PC) */
 }
 
+/* 4. Un toque llamativo para la sección de juegos */
+.caos-text, .stolen-gift-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 700;
+}
+
 .caos-text {
-    font-family: 'Great Vibes', cursive;
     font-size: clamp(2.2rem, 6vw, 3rem); /* Texto ligeramente más grande y adaptable */
     color: var(--red-xmas);
     transform: rotate(-10deg);
@@ -329,7 +343,6 @@ body {
 }
 
 .jesus-subtitle {
-    font-family: 'Playfair Display', serif;
     font-size: clamp(1.5rem, 5vw, 2rem);
     color: var(--gold-xmas); /* Tono dorado para resaltar sobre el fondo */
     margin: 10px 0 0 0;
